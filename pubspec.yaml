@@ -10,12 +10,16 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
+  easy_localization: ^3.0.1
   equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  flutter_localization: ^0.1.10
+  flutter_svg: ^2.0.2
   get_it: ^7.2.0
   go_router: ^6.0.9
+ 
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -25,3 +29,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/icons/
+  fonts:
+    - family: Segoe UI
+      fonts:
+        - asset: assets/fonts/Segoe UI Bold Italic.ttf
+        - asset: assets/fonts/Segoe UI Bold.ttf
+        - asset: assets/fonts/Segoe UI Italic.ttf
+        - asset: assets/fonts/Segoe UI.ttf
+          

@@ -66,6 +66,12 @@ const space75 = _Space(75);
 /// gap 100*100
 const space100 = _Space(100);
 
+/// gap 150*150
+const space150 = _Space(150);
+
+/// gap 200*200
+const space200 = _Space(200);
+
 /// default divider
 const divider = Divider(
   thickness: 1.5,
