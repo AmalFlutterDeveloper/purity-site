@@ -16,57 +16,60 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          space24,
-          const Text(
-            'تسجيل الدخول الي بيورتي',
-            style: TextStyle(
-              fontFamily: 'AArslanWessamA-AArslanWessamA',
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          space24,
-          SizedBox(
-            width: 300,
-            child: Form(
-              child: Column(
-                children: [
-                  const CustomInputTextField(
-                    autofocus: true,
-                    title: 'رقم الهاتف',
-                    keyboardType: TextInputType.number,
-                  ),
-                  space16,
-                  const CustomInputTextField(
-                    obscureText: true,
-                    title: 'الرقم السري',
-                    keyboardType: TextInputType.visiblePassword,
-                  ),
-                  space16,
-                  CustomCheckBox(
-                    title: 'تذكرني',
-                    onChange: (value) {},
-                  ),
-                  space24,
-                  CustomButton(
-                    title: 'تسجيل الدخول',
-                    color: primary,
-                    onPressed: () {},
-                  ),
-                  space24,
-                  CustomButton(
-                    title: 'ليس لدي حساب',
-                    color: grey,
-                    onPressed: () => go(R.signUp),
-                  ),
-                ],
+      body: ColoredBox(
+        color: white,
+        child: Column(
+          children: [
+            Header(),
+            space24,
+            const Text(
+              'تسجيل الدخول الي بيورتي',
+              style: TextStyle(
+                fontFamily: 'AArslanWessamA-AArslanWessamA',
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-        ],
+            space24,
+            SizedBox(
+              width: 300,
+              child: Form(
+                child: Column(
+                  children: [
+                    const CustomInputTextField(
+                      autofocus: true,
+                      title: 'رقم الهاتف',
+                      keyboardType: TextInputType.number,
+                    ),
+                    space16,
+                    const CustomInputTextField(
+                      obscureText: true,
+                      title: 'الرقم السري',
+                      keyboardType: TextInputType.visiblePassword,
+                    ),
+                    space16,
+                    CustomCheckBox(
+                      title: 'تذكرني',
+                      onChange: (value) {},
+                    ),
+                    space24,
+                    CustomButton(
+                      title: 'تسجيل الدخول',
+                      color: primary,
+                      onPressed: () {},
+                    ),
+                    space24,
+                    CustomButton(
+                      title: 'ليس لدي حساب',
+                      color: grey,
+                      onPressed: () => go(R.signUp),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

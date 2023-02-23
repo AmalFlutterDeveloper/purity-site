@@ -49,7 +49,8 @@ class Header extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: white,
       height: 200,
       child: Column(
         children: [

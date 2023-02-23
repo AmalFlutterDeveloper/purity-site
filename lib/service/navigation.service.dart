@@ -24,7 +24,7 @@ class NavigationService {
   static final router = GoRouter(
     navigatorKey: _key,
     debugLogDiagnostics: true,
-    initialLocation: '/login',
+    initialLocation: '/',
     errorBuilder: (context, state) => const NotFoundPage(),
     routes: [
       GoRoute(
@@ -47,7 +47,7 @@ class NavigationService {
 }
 
 Widget _buildHome(_, GoRouterState state) {
-  return const HomePage();
+  return HomePage();
 }
 
 Widget _buildLogin(_, GoRouterState state) {
