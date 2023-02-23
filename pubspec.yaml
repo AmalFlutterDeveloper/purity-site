@@ -39,4 +39,7 @@ flutter:
         - asset: assets/fonts/Segoe UI Bold.ttf
         - asset: assets/fonts/Segoe UI Italic.ttf
         - asset: assets/fonts/Segoe UI.ttf
+    - family: AArslanWessamA-AArslanWessamA
+      fonts:
+        - asset: assets/fonts/AArslanWessamA-AArslanWessamA.ttf
           

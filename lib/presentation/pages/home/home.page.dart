@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:purity/presentation/widgets/header.widget.dart';
+import 'package:purity/presentation/widgets/header/header.widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

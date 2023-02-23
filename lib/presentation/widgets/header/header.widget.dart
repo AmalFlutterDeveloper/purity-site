@@ -1,11 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:purity/core/constant/colors.core.dart';
 import 'package:purity/core/constant/padding.core.dart';
-import 'package:purity/presentation/widgets/header_item.widget.dart';
-import 'package:purity/presentation/widgets/top_Header.widget.dart';
+import 'package:purity/core/constant/space.core.dart';
+import 'package:purity/presentation/widgets/header/header_item.widget.dart';
+import 'package:purity/presentation/widgets/header/top_Header.widget.dart';
 
 class HeaderContent {
   final String title;
@@ -51,7 +50,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230,
+      height: 200,
       child: Column(
         children: [
           Stack(
@@ -65,19 +64,22 @@ class Header extends StatelessWidget {
                   const TopHeader(),
                   Container(
                     color: darkGrey,
-                    height: 50,
+                    height: 60,
                     width: double.infinity,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        const Expanded(child: space100),
                         ...items.map(
                           (e) => Padding(
-                            padding: edgeV16,
+                            padding: edgeH16V4,
                             child: HeaderItem(
                               title: e.title,
                               icon: e.icon,
                             ),
                           ),
-                        )
+                        ),
+                        const Expanded(child: space100),
                       ],
                     ),
                   )

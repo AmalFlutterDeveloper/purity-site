@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:purity/core/constant/colors.core.dart';
 import 'package:purity/core/constant/space.core.dart';
-import 'package:purity/presentation/widgets/header_title.widget.dart';
+import 'package:purity/presentation/widgets/header/header_title.widget.dart';
 
 class TopHeader extends StatelessWidget {
   const TopHeader({super.key});
@@ -11,7 +11,7 @@ class TopHeader extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xff25BF82).withOpacity(0.8),
       ),
-      height: 60,
+      height: 90,
       width: double.infinity,
       child: Row(
         children: [

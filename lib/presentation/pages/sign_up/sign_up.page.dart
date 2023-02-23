@@ -1,18 +1,12 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
-import 'package:purity/core/constant/colors.core.dart';
+import 'package:purity/core/constant/padding.core.dart';
 import 'package:purity/core/constant/space.core.dart';
-import 'package:purity/core/navigations.core.dart';
-import 'package:purity/presentation/pages/login/widget/custom_check_box.widget.dart';
 import 'package:purity/presentation/widgets/custom_button.widget.dart';
 import 'package:purity/presentation/widgets/custom_input_text_field.widget.dart';
 import 'package:purity/presentation/widgets/header/header.widget.dart';
-import 'package:purity/service/navigation.service.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +15,7 @@ class LoginPage extends StatelessWidget {
           Header(),
           space24,
           const Text(
-            'تسجيل الدخول الي بيورتي',
+            'تسجيلك مش هياخد وقت',
             style: TextStyle(
               fontFamily: 'AArslanWessamA-AArslanWessamA',
               fontSize: 28,
@@ -36,6 +30,11 @@ class LoginPage extends StatelessWidget {
                 children: [
                   const CustomInputTextField(
                     autofocus: true,
+                    title: 'الإســـــم',
+                    keyboardType: TextInputType.name,
+                  ),
+                  space16,
+                  const CustomInputTextField(
                     title: 'رقم الهاتف',
                     keyboardType: TextInputType.number,
                   ),
@@ -46,21 +45,16 @@ class LoginPage extends StatelessWidget {
                     keyboardType: TextInputType.visiblePassword,
                   ),
                   space16,
-                  CustomCheckBox(
-                    title: 'تذكرني',
-                    onChange: (value) {},
+                  const CustomInputTextField(
+                    obscureText: true,
+                    title: 'تأكيد الرقم السري',
+                    keyboardType: TextInputType.visiblePassword,
                   ),
                   space24,
                   CustomButton(
-                    title: 'تسجيل الدخول',
-                    color: primary,
+                    padding: edgeH40V12,
+                    title: 'التالي',
                     onPressed: () {},
-                  ),
-                  space24,
-                  CustomButton(
-                    title: 'ليس لدي حساب',
-                    color: grey,
-                    onPressed: () => go(R.signUp),
                   ),
                 ],
               ),
