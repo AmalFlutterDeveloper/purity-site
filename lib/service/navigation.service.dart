@@ -18,12 +18,6 @@ enum R {
 
   ///  /signUp
   signUp,
-
-  ///  /cards
-  cards,
-
-  ///  /foodProduct
-  foodProduct,
 }
 
 class NavigationService {
@@ -37,18 +31,7 @@ class NavigationService {
     initialLocation: '/',
     errorBuilder: (context, state) => const NotFoundPage(),
     routes: [
-      GoRoute(name: R.home.name, path: '/', builder: _buildHome, routes: [
-        GoRoute(
-          name: R.cards.name,
-          path: 'cards',
-          builder: _buildCards,
-        ),
-        GoRoute(
-          name: R.foodProduct.name,
-          path: 'foodProduct',
-          builder: _buildFoodProduct,
-        ),
-      ]),
+      GoRoute(name: R.home.name, path: '/', builder: _buildHome),
       GoRoute(
         name: R.login.name,
         path: '/login',
@@ -76,12 +59,4 @@ Widget _buildLogin(_, GoRouterState state) {
 
 Widget _buildSignUp(_, GoRouterState state) {
   return const SignUpPage();
-}
-
-Widget _buildCards(_, GoRouterState state) {
-  return const CardsPage();
-}
-
-Widget _buildFoodProduct(_, GoRouterState state) {
-  return const FoodProductPage();
 }
