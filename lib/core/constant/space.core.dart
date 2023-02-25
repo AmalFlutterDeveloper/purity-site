@@ -72,12 +72,6 @@ const space150 = _Space(150);
 /// gap 200*200
 const space200 = _Space(200);
 
-/// default divider
-const divider = Divider(
-  thickness: 1.5,
-  color: Color(0xffF0F0F2),
-);
-
 const spaceW = SizedBox(width: double.infinity);
 
 class _Space extends StatelessWidget {

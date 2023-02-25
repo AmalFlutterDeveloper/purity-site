@@ -17,11 +17,6 @@ class TabCubit extends Cubit<int> {
   /// this is page controller that will be manage page view
   final controller = PageController();
 
-  void onUpdate(int index) {
-    if (state == index) return;
-    emit(index);
-  }
-
   void onTap(int index) {
     if (state == index) return;
     emit(index);

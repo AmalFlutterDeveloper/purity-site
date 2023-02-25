@@ -1,11 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:purity/core/constant/colors.core.dart';
+
 import 'package:purity/core/constant/padding.core.dart';
 import 'package:purity/core/constant/space.core.dart';
 import 'package:purity/presentation/pages/home/cubit/tab_cubit.dart';
-import 'package:purity/presentation/pages/slider/widget/dots_indicator.widget.dart';
+
 import 'package:purity/presentation/widgets/header/header.widget.dart';
 import 'package:purity/presentation/widgets/side_bar.widget.dart';
 
@@ -17,8 +16,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  CarouselController buttonCarouselController = CarouselController();
-
   /// this field will be control witch pages is currently shown in page
   /// and it will have the home logic
   late TabCubit tabCubit;
@@ -43,7 +40,6 @@ class _HomePageState extends State<HomePage> {
               children: [
                 space32,
                 SideBar(tabCubit: tabCubit),
-                // space64,
                 Expanded(
                   child: PageView.builder(
                     controller: tabCubit.controller,
@@ -53,7 +49,6 @@ class _HomePageState extends State<HomePage> {
                       child: tabCubit.pages[i].child,
                     ),
                     itemCount: tabCubit.pages.length,
-                    onPageChanged: tabCubit.onUpdate,
                   ),
                 ),
               ],
