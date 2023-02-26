@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 import 'package:purity/core/constant/colors.core.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomElevatedButton extends StatelessWidget {
   final String title;
   final Color color;
   final EdgeInsetsGeometry? padding;
   final VoidCallback? onPressed;
-  const CustomButton({
+  const CustomElevatedButton({
     Key? key,
     required this.title,
     this.color = primary,

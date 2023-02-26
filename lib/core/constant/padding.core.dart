@@ -90,6 +90,9 @@ const edgeH8V10 = EdgeInsets.symmetric(horizontal: 8, vertical: 10);
 /// edgeInsetsSymmetric horizontal 16 vertical 4
 const edgeH16V4 = EdgeInsets.symmetric(horizontal: 16, vertical: 4);
 
+/// edgeInsetsSymmetric horizontal 16 vertical 2
+const edgeH16V2 = EdgeInsets.symmetric(horizontal: 16, vertical: 2);
+
 /// edgeInsetsSymmetric horizontal 16 vertical 8
 const edgeH16V8 = EdgeInsets.symmetric(horizontal: 16, vertical: 8);
 

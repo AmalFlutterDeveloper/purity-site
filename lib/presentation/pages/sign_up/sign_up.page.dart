@@ -56,7 +56,7 @@ class SignUpPage extends StatelessWidget {
                       keyboardType: TextInputType.visiblePassword,
                     ),
                     space24,
-                    CustomButton(
+                    CustomElevatedButton(
                       padding: edgeH40V12,
                       title: 'التالي',
                       onPressed: () => go(R.home),

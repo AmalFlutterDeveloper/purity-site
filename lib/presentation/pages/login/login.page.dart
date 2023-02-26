@@ -53,13 +53,13 @@ class LoginPage extends StatelessWidget {
                       onChange: (value) {},
                     ),
                     space24,
-                    CustomButton(
+                    CustomElevatedButton(
                       title: 'تسجيل الدخول',
                       color: primary,
                       onPressed: () {},
                     ),
                     space24,
-                    CustomButton(
+                    CustomElevatedButton(
                       title: 'ليس لدي حساب',
                       color: grey,
                       onPressed: () => go(R.signUp),

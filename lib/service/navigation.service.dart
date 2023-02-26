@@ -8,6 +8,7 @@ import 'package:purity/presentation/pages/home/sub_pages/cards.sub.page.dart';
 import 'package:purity/presentation/pages/home/sub_pages/food_product.sub.page.dart';
 import 'package:purity/presentation/pages/login/login.page.dart';
 import 'package:purity/presentation/pages/not_found/not_found.page.dart';
+import 'package:purity/presentation/pages/shipment_details/shipment_details.page.dart';
 import 'package:purity/presentation/pages/sign_up/sign_up.page.dart';
 
 enum R {
@@ -22,6 +23,9 @@ enum R {
 
   ///  /cart
   cart,
+
+  ///  /shipment
+  shipment,
 }
 
 class NavigationService {
@@ -32,7 +36,7 @@ class NavigationService {
   static final router = GoRouter(
     navigatorKey: _key,
     debugLogDiagnostics: true,
-    initialLocation: '/card',
+    initialLocation: '/shipment',
     errorBuilder: (context, state) => const NotFoundPage(),
     routes: [
       GoRoute(
@@ -55,6 +59,11 @@ class NavigationService {
         path: '/cart',
         builder: _buildCart,
       ),
+      GoRoute(
+        name: R.shipment.name,
+        path: '/shipment',
+        builder: _buildShipment,
+      ),
     ],
   );
 }
@@ -76,4 +85,8 @@ Widget _buildSignUp(_, GoRouterState state) {
 
 Widget _buildCart(_, GoRouterState state) {
   return const CartPage();
+}
+
+Widget _buildShipment(_, GoRouterState state) {
+  return const ShipmentDetailsPage();
 }
